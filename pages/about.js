@@ -1,6 +1,6 @@
 import { header } from "../components/header.js"
 
-function aboutPage () {
+function pageAbout () {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -17,4 +17,4 @@ function aboutPage () {
   </body>
   </html>`
 }
-export { aboutPage }
+export { pageAbout }

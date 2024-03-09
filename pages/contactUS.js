@@ -1,6 +1,6 @@
 import { header } from "../components/header.js"
 
-function contactUsPage () {
+function pageContactUs () {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -17,4 +17,4 @@ function contactUsPage () {
   </body>
   </html>`
 }
-export { contactUsPage }
+export { pageContactUs }

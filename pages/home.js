@@ -1,6 +1,6 @@
 import { header } from "../components/header.js"
 
-function homePage () {
+function pageHome () {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -18,4 +18,4 @@ function homePage () {
   </body>
   </html>`
 }
-export { homePage }
+export { pageHome }
