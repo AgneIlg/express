@@ -8,6 +8,9 @@ import { PageAbout } from './pages/PageAbout.js';
 const app = express();
 const port = 4600;
 
+app.use(express.static('static'))
+
+
 app.get('/', (req, res) => {
     const page = new PageHome();
     res.send(page.render());
