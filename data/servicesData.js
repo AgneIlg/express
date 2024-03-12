@@ -14,6 +14,21 @@ const servicesData = [
         title: 'UX',
         href: '/services/ux',
     },
+    {
+        id: 'pricing',
+        title: 'Pricing',
+        href: '/services/pricing',
+    },
+    {
+        id: 'testimonials',
+        title: 'Testimonials',
+        href: '/services/testimonials',
+    },
+    {
+        id: 'locations',
+        title: 'Locations',
+        href: '/services/locations',
+    },
 ];
 
 export {servicesData};
