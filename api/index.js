@@ -68,6 +68,24 @@ apiRouter.get('/api', (req, res) => {
 });
 
 
+// Kreipiantis konkreciai i toli URL yra grazinamas laikas tokiu formatu hh:mm:ss, bet visi skaiciai yra zodziai
+// pvz.: 10:57:14 => desimt valandu, penkiasdesimt septynios minutes, keturiolika sekundziu
+// pasistenkti apgalvoti visas galimas gramatikos situacijas
+apiRouter.get('/api/time-as-text', (req, res) => {
+    const d = new Date();
+
+    const h = formatTimeAsText(d.getHours());
+    const m = formatTimeAsText(d.getMinutes());
+    const s = formatTimeAsText(d.getSeconds());
+
+    const ht = timeValueTitle(d.getHours(), 'h');
+    const mt = timeValueTitle(d.getMinutes(), 'm');
+    const st = timeValueTitle(d.getSeconds(), 's');
+
+    const time = `${h} ${ht}, ${m} ${mt}, ${s} ${st}`;
+    return res.status(200).send(time);
+});
+
 
 
 export { apiRouter };
