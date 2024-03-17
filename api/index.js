@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { formatTimeNumber } from "../lib/formatTimeNumber.js";
 import { formatTimeAsText, timeValueTitle } from "../lib/formatTimeAsText.js";
+import { replace } from "../lib/formatLastLetter.js";
+
 
 const apiRouter = Router();
 
@@ -87,4 +89,11 @@ apiRouter.get('/api/time-as-text', (req, res) => {
     return res.status(200).send(time);
 });
 
+apiRouter.get('/api/user/:name', (req, res) => {
+    const name = req.params.name;
+    console.log(name);
+    const newName = replace(name[0].toUpperCase() + name.slice(1).toLowerCase());
+    console.log(newName);
+    return res.status(400).send('Welcome, ' + newName);
+})
 export { apiRouter };
